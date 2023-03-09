@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <style>
+        table
+        {
+            border: 1px solid blueviolet;        
+        }
+        th, td
+        {
+            background-color: rgb(196, 47, 255);
+        }
+    </style>
+</head>
+<body body background="img/1279820.jpg" >
+    <h1 style="color:#ffffff">Tienda de Ropa Online</h1>
+    <form action="" method="post" enctype="text/plain">
+        <fieldset>
+            <legend>
+                <label for="Informacion" style="color:#ffffff">
+                    Informacion del Cliente
+                </label> 
+            </legend>
+            <table align="center">
+                <thead>
+                    <tr>
+                        <th>
+                            <label for="nombre">Nombre</label>
+                             <input type="text" placeholder="Nombre" maxlength="12" name="nombre" id="nombre" required><br>
+
+                             <label for="usuario">Nombre de usuario</label>
+                             <input type="text" placeholder="usuario" maxlength="12" name="usuario" id="usuario"><br>
+
+                        </th>
+
+                        <th>
+                            <label for="paterno">Apellido Paterno</label>
+                            <input type="text" placeholder="Apellido Paterno"name="Paternoe" id="Paterno" maxlength="25" required><br>
+
+                            <label for="Materno">Apellido Materno</label>
+                            <input type="text" placeholder="Apellido Materno"name=" Materno" id=" Materno" maxlength="25" required><br>
+
+                        </th>
+
+                        <th>
+                            <label for="pass">Contraseña</label>
+                            <input type="password" placeholder="pass" maxlength="12" name="pass" id="pass"><br>
+                        </th>
+                            
+                    </tr>
+                </thead>
+            </table>
+        </fieldset>   
+        <fieldset>
+            <legend>
+                <label for="Facturacion" style="color:#ffffff">
+                    Datos de Facturacion
+                </label> 
+            </legend>
+            <table align="center">
+                <thead>
+                    <tr>
+                        <th>
+                            <label for="Calle">Calle</label>
+                             <input type="text" placeholder="Calle" maxlength="12" name="Calle" id="Calle"><br>
+
+                             <label for="correo">E-mail</label>
+                             <input type="email" placeholder="correo" maxlength="12" name="correo" id="correo" required><br>
+
+                             <label for="fechan">Fecha de la venta:</label>
+                             <input type="date" name="fechan" id="fechan"/><br>
+                        </th>
+
+                        <th>
+                            <label for="numeroE">Numero Exterior</label>
+                            <input type="text" placeholder="Numero Exterior"name="numeroE" id="numeroE" maxlength="25"><br>
+
+                            <label for="CodigoPostal">Codigo Postal</label>
+                            <input type="text" placeholder="Codigo Postal"name=" Codigop" id=" Codigop" maxlength="25"><br>
+                        </th>
+
+                        <th>
+                            <label for="colonia">Colonia</label>
+                            <input type="text" placeholder="Colonia"name="Colonia" id="Colonia" maxlength="25"><br>
+
+                            <label for="RFC">RFC</label>
+                            <input type="text" placeholder="RFC"name="RFC" id="RFC" maxlength="25" required><br>
+                        </th>                            
+                    </tr>
+                </thead>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>
+                <label for="Articulo" style="color:#ffffff">
+                    Datos del Articulo adquirido
+                </label> 
+            </legend>
+            <table align="center">
+                <thead>
+                    <tr>
+                        <th>
+                            <h3>Tipo</h3>
+                                <select size="5" multiple>
+                                    <optgroup label="Prendas">
+                                    <option>Vestido</option>
+                                    <option selected>Falda</option>
+                                    <option>Pantalon</option>
+                                    <option>Playera</option>
+                                    <option>Camisa</option>
+                                    </optgroup>
+                                </select>
+                                <br/>
+                        </th>
+
+                        <th>
+                            <h3 >Talla:</h3>
+                            <input type="checkbox" name="chico" id="chico" value="chico"/>
+                            <label for="chico">chico</label><br>
+
+                            <input type="checkbox" name="Mediano" id="Mediano" value="Mediano" checked/>
+                            <label for="Mediano">Mediano</label><br>
+
+                            <input type="checkbox" name="Grande" id="Grande" value="Grande"/>
+                            <label for="Grande">Grande</label><br>
+                        </th>
+
+                        <th>
+                            <label for="colores">Selecciona un color:</label>
+                            <input type="color" name="colores" id="colores"/><br>
+
+                            <input type="submit" name="enviar" id="enviar" value="Enviar datos"/><br>
+
+                            <input type="reset" name="borrar" id="borrar" value="Borrar datos"/><br>
+                        </th>    
+                    </tr>
+                </thead>
+            </table>
+        </fieldset>      
+    </form>
+    <flooter>
+        Distribuidora de ropa en linea &copy; 2023
+    </flooter>
+</body>
+</html>
