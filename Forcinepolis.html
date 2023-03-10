@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <link rel="icon" type="image/jpg" href="img/logo-cinepolis-dos.jpg"/>
+    <style>
+        .img-container {
+          text-align: center;
+        }
+        table
+        {
+            border: 1px solid rgb(255, 172, 47);        
+        }
+        th, td
+        {
+            border: 1px solid rgb(255, 172, 47);
+            background-color: rgb(255, 172, 47);
+        }
+    </style>
+</head>
+<body style="background-color:#2d38d1">
+    <h1 style="color:#ffffff" align="center">Cinepolis</h1>
+    <center>
+        <i style="color:#ffffff" align="center">La capital del cine</i>
+    </center>
+
+    <form action="" method="post" enctype="text/plain">
+        <fieldset>
+            <legend>
+                <label for="usuario" style="color:#ffffff">
+                    Registro
+                </label> 
+            </legend>
+            <table align="center">
+                <thead>
+                    <tr>
+                        <th>
+                            <label for="nombre" style="color:#ffffff">Nombre</label>
+                             <input type="text" placeholder="Nombre" maxlength="12" name="nombre" id="nombre" required><br>
+
+                             <label for="usuario" style="color:#ffffff">Nombre de usuario</label>
+                             <input type="text" placeholder="usuario" maxlength="12" name="usuario" id="usuario"><br>
+
+                        </th>
+
+                        <th>
+                            <label for="paterno" style="color:#ffffff">Apellido Paterno</label>
+                            <input type="text" placeholder="Apellido Paterno"name="Paternoe" id="Paterno" maxlength="25" required><br>
+
+                            <label for="Materno" style="color:#ffffff">Apellido Materno</label>
+                            <input type="text" placeholder="Apellido Materno"name=" Materno" id=" Materno" maxlength="25" required><br>
+
+                        </th>
+
+                        <th>
+                            <label for="pass" style="color:#ffffff">Contraseña</label>
+                            <input type="password" placeholder="pass" maxlength="12" name="pass" id="pass"><br>
+
+                            <label for="correo" style="color:#ffffff">E-mail</label>
+                            <input type="email" name="correo" id="correo"/><br>
+                        </th>
+
+                        <th>
+                            <label for="fechan" style="color:#ffffff">Fecha de nacimiento:</label><br>
+                            <input type="date" name="fechan" id="fechan"/><br>
+
+                            <h3 style="color:#ffffff">Indica tu genero</h3>
+                            <input type="radio" name="genero" id="genero"/>
+                            <label for="genero" style="color:#ffffff">Femenino</label><br>
+
+                            <input type="radio" name="genero" id="genero"/>
+                            <label for="genero" style="color:#ffffff">Masculino</label><br>
+                        </th>
+                            
+                    </tr>
+                </thead>
+            </table>
+        </fieldset>   
+
+        <p style="color:#ffffff" align="Center">Click en la imagen para registrarse con facebook</p>
+        <div class="img-container">   
+            <img src="img/descarga (1).jpg" usemap="#Face" alt="Registro facebook" width="50%"/>
+                <map name="Face">
+                    <area shape="rect" coords="0,0,5000,5000" href="https://es-la.facebook.com/">
+                </map>
+        </div>
+
+    <center>
+        <fieldset>
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            <legend>
+                                <label for="usuario" style="color:#ffffff">
+                                        Compra de boletos
+                                </label> 
+                                <br>
+                            </legend>
+                            <br>
+                            <label for="fechahora" style="color:#ffffff"> Seleciona la fecha y hora:</label><br>
+                            <input type="datetime-local" name="fechahora" id="fechahora"/><br>
+                
+                            <label for="cantidad" style="color:#ffffff">Cantidad a comprar:</label><br>
+                            <input type="number" name="cantidad" id="cantidad"/><br>
+                
+                            <label for="califica" style="color:#ffffff">Como calificarias nuestro servicio?:</label><br>
+                            <input type="range" name="califica" id="califica" min="1" max="10" value="5"/><br>
+                
+                            <h3 style="color:#ffffff">Indica tus formas de pago preferenciales:</h3>
+                            <input type="checkbox" name="tarjeta" id="tarjeta" value="tarjeta"/>
+                            <label for="tarjeta" style="color:#ffffff">Tarjeta de Credito</label><br>
+                
+                            <input type="checkbox" name="tarjetad" id="tarjetad" value="tarjetad" checked/>
+                            <label for="tarjetad" style="color:#ffffff">Tarjeta de Debito</label><br>
+                
+                            <input type="checkbox" name="transfer" id="transfer" value="transfer"/>
+                            <label for="transfer" style="color:#ffffff">Transferencia</label><br>
+                
+                            <h3 style="color:#ffffff">Categoria de asientos</h3>
+                            <select size="5" multiple>
+                                <optgroup label="Fila A">
+                                <option selected>1A</option>
+                                <option>2A</option>
+                                <option>3A</option>
+                                <option>4A</option>
+                                <option>5A</option>
+                                </optgroup>
+                                <optgroup label="Fila B">
+                                <option>1B</option>
+                                <option>2B</option>
+                                <option>3B</option>
+                                <option>4B</option>
+                                <option>5B</option>
+                                </optgroup>
+                                <optgroup label="Fila C">
+                                <option>1C</option>
+                                <option>2C</option>
+                                <option>3C</option>
+                                <option>4C</option>
+                                <option>5C</option>
+                                </optgroup>
+                            </select>
+                            <br/>
+                            <br/>
+                
+                            <label for="marca" style="color:#ffffff">Pelicula a elegir</label>
+                            <input type="text" name="marca" id="marca" list="marcas"/>
+                            <datalist id="marcas">
+                                <option>Violet Evergarden: The Movie</option>
+                                <option>Free Guy</option>
+                                <option>Gato con botas: el último deseo</option>
+                                <option>Everything Everywhere All at Once</option>
+                                <option>Sonríe</option>
+                                <option>Burbujas 2022</option>
+                                <option>Deadpool 2</option>
+                                <option>Ghost in the Shell: vigilante del futuro</option>
+                            </datalist>
+                            <br/>
+                            <br/>
+                            <label for="comenta" style="color:#ffffff">Comentarios</label><br>
+                            <textarea name="comenta" id="comenta" cols="25" rows="10"></textarea><br>
+                
+                            <input type="submit" name="enviar" id="enviar" value="Enviar datos"/>
+                
+                            <input type="reset" name="borrar" id="borrar" value="Borrar datos"/>
+                        </th>
+                    </tr>
+                </thead>
+            </table>
+        </fieldset>
+    </center>
+    </form>
+    <center>
+        <img src="img/61b7f8c0bfd54f3f943b4dce6fad984d.gif" alt="MonaChina"/>
+    </center>
+    <flooter style="color:#ffffff">
+        Cinepolis &copy; 2023
+    </flooter>
+</body>
+</html>102
