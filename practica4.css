@@ -1,8 +1,10 @@
-body{
+*{
+    background-color: rgb(178, 223, 223);
+}
+div #uno{
     background-color: aqua;
 }
-
-div{
+div #dos{
     background-color: aqua;
 }
 
