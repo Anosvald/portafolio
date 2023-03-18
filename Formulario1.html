@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario1</title>
+    <link rel="stylesheet" href="Formulario1.css"/>
+</head>
+<body>
+    <h1>Servicios de interenet y Telefonia</h1>
+    <h2>Contrato de servicios</h2>
+    <form action="" method="post" enctype="text/plain">
+        <fieldset>
+            <legend>
+                <label for="usuario">
+                    Datos del cliente
+                </label> 
+            </legend>
+            <table align="center">
+                <thead>
+                    <tr>
+                        <th>
+                            <label id="label1" for="nombre">Nombre</label>
+                            <input type="text" placeholder="Nombre" maxlength="12" name="nombre" id="nombre" required><br>
+                        </th>
+
+                        <th>
+                            <label id="label1" for="paterno">Apellido Paterno</label>
+                            <input type="text" placeholder="Apellido Paterno"name="Paternoe" id="Paterno" maxlength="25" required><br>
+                        </th>
+
+                        <th>
+                            <label id="label1" for="Materno">Apellido Materno</label>
+                            <input type="text" placeholder="Apellido Materno"name=" Materno" id=" Materno" maxlength="25" required><br>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <h3>Ciudad</h3>
+                                <select size="5" multiple>
+                                    <option>Sinaloa</option>
+                                    <option>Jalisco</option>
+                                    <option>Michoacán</option>
+                                    <option selected>San Luis Potosi</option>
+                                    <option>Yucatán</option>
+                                    <option>Baja California</option>
+                                    <option>Nuevo León</option>
+                                    <option>Tamaulipas</option>
+                                    <option>Chiapas</option>
+                                    <option>Estado de Guerrero</option>
+                                    <option>Guanajuato</option>
+                                    <option>Sonora</option>
+                                    <option>Estado de Hidalgo</option>
+                                    <option>Quintana Roo</option>
+                                    <option>Ciudad de México</option>
+                                    <option>Nayarit</option>
+                                    <option>Tabasco</option>
+                                    <option>Tlaxcala</option>
+                                    <option>Estado de Durango</option>
+                                    <option>Estado de Morelos</option>
+                                    </optgroup>
+                                </select>
+                                <br/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>    
+        </fieldset>
+        <fieldset>
+            <legend>
+                <label for="servicio">
+                    Servicio a contratar
+                </label>
+            </legend>
+            <table>
+                <tr>
+                    <td>
+                        <h3>Selecciona el tipo de servicio a contratar</h3>
+                        <input type="checkbox" name="linea" id="linea" value="linea" checked>
+                        <label for="linea">Línea Telefónica</label>
+                        <input type="checkbox" name="internet" id="internet" value="internet" checked>
+                        <label for="internet">Servicio de Internet</label>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>
+                <label>
+                    Forma de pago
+                </label>
+            </legend>
+            <table align="center">
+                <tbody>
+                    <tr>
+                        <h3>Elige la forma de pago</h3>
+                        <td>
+                                <input type="radio" name="TDC" id="TDC"/>
+                                <label id="label3" for="TDC">TDC</label><br>
+                     
+                        </td>
+                        <td>
+                            <br>
+                        </td>
+                        <td>
+                            <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="Credito" id="Credito"/>
+                            <label id="label3" for="Credito">Targeta de Credito</label><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="efectivo" id="efectivo"/>
+                            <label id="label3" for="efectivo">Pago en efectivo</label><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="cheque" id="cheque"/>
+                            <label id="label3" for="cheque">Pago mediante cheque</label><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="Bancaria" id="Bancaria"/>
+                            <label id="label3" for="Bancaria">Transferencia Bancaria</label><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="Deposito" id="Deposito"/>
+                            <label id="label3" for="Deposito">Deposito bancario</label><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="Oxxo" id="Oxxo"/>
+                            <label id="label3" for="Oxxo">Pago en Oxxo</label><br><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="si" type="submit" name="" id="" value="Enviar datos"/>
+                            <input id="si"type="reset" name="" id="" value="Borrar datos">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+    </form>
+    <h2>Práctica 5</h2>
+    <h3 id="no">HTML y CSS</h3>
+    <h3 id="no">Primavera 2023</h3>
+</body>
+</html>
