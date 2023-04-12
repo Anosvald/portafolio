@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiedad outline</title>
+    <style>
+        *{
+            background-color:rgb(90, 86, 86)
+        }
+        #si{
+            outline-style: dotted;
+        }
+        label{
+            outline-style: inset;
+            font-family:'Times New Roman', Times, serif;
+            color:white;
+            font-size: 25px;
+        }
+        #no{
+            outline-style: double;
+        }
+    </style>
+</head>
+<body>
+    <form id="si" action="" method="post" enctype="text/plain">
+        <fieldset>
+            <legend>
+                <label for="usuario">
+                    Datos del cliente
+                </label> 
+            </legend>
+            <table id="no" align="center">
+                <thead>
+                    <tr>
+                        <th>
+                            <label id="label1" for="nombre">Nombre</label>
+                            <input type="text" placeholder="Nombre" maxlength="12" name="nombre" id="nombre" required><br>
+                        </th>
+
+                        <th>
+                            <label id="label1" for="paterno">Apellido Paterno</label>
+                            <input type="text" placeholder="Apellido Paterno"name="Paternoe" id="Paterno" maxlength="25" required><br>
+                        </th>
+
+                        <th>
+                            <label id="label1" for="Materno">Apellido Materno</label>
+                            <input type="text" placeholder="Apellido Materno"name=" Materno" id=" Materno" maxlength="25" required><br>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <h3>Ciudad</h3>
+                                <select size="5" multiple>
+                                    <option>Sinaloa</option>
+                                    <option>Jalisco</option>
+                                    <option>Michoacán</option>
+                                    <option selected>San Luis Potosi</option>
+                                    <option>Yucatán</option>
+                                    <option>Baja California</option>
+                                    <option>Nuevo León</option>
+                                    <option>Tamaulipas</option>
+                                    <option>Chiapas</option>
+                                    <option>Estado de Guerrero</option>
+                                    <option>Guanajuato</option>
+                                    <option>Sonora</option>
+                                    <option>Estado de Hidalgo</option>
+                                    <option>Quintana Roo</option>
+                                    <option>Ciudad de México</option>
+                                    <option>Nayarit</option>
+                                    <option>Tabasco</option>
+                                    <option>Tlaxcala</option>
+                                    <option>Estado de Durango</option>
+                                    <option>Estado de Morelos</option>
+                                    </optgroup>
+                                </select>
+                                <br/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>    
+        </fieldset>
+    </form>
+
+</body>
+</html>
