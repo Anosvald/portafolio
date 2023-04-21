@@ -1,4 +1,4 @@
-function Sumar(){
+function Suma(){
     /*parseInt(); parseFloat();*/
     var num1,num2, result;
     num1=parseFloat(document.getElementById("num1").value);
@@ -6,7 +6,7 @@ function Sumar(){
     result=parseFloat(num1)+parseInt(num2);
     document.getElementById("resultado").innerHTML=result;
 }
-function Restar(){
+function Rest(){
     /*parseInt(); parseFloat();*/
     var num1,num2, result;
     num1=parseFloat(document.getElementById("num1").value);
@@ -14,7 +14,7 @@ function Restar(){
     result=parseFloat(num1)-parseInt(num2);
     document.getElementById("resultado").innerHTML=result;
 }
-function Multiplicar(){
+function Multipli(){
     /*parseInt(); parseFloat();*/
     var num1,num2, result;
     num1=parseFloat(document.getElementById("num1").value);
@@ -22,7 +22,7 @@ function Multiplicar(){
     result=parseFloat(num1)*parseInt(num2);
     document.getElementById("resultado").innerHTML=result;
 }
-function Dividir(){
+function Div(){
     /*parseInt(); parseFloat();*/
     var num1,num2, result;
     num1=parseFloat(document.getElementById("num1").value);
