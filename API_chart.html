@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafico</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Tarea', 'Horas por dia'],
+          ['Tareas',     6],
+          ['Dormir',      3],
+          ['Comer',  1],
+          ['Ver yutube', 1],
+          ['Escuela',    8], 
+          ['Series',    1]
+        ]);
+
+        var options = {
+          title: 'Mis actividades diarias',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body background="img/Grafico.jpeg" style="background-repeat:no-repeat;background-size:cover;background-attachment:fixed;">
+    <div id="donutchart" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>
