@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RFC</title>
+    <script src="RFC.js"></script>
+    <style>
+        body{
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        #boton{
+            background-color: rgb(105, 26, 95);
+            height:60px;
+            color:white;
+            width: 180px;
+        }
+        label{
+            color:white;
+        }
+    </style>
+</head>
+<body background="img/wars.jpg" style="background-repeat:no-repeat;background-size:cover;background-attachment:fixed;">
+    <h1>Crear RFC</h1>
+    <form method="post" enctype="text/plain">
+        <label for="nombre">Escribe tu Nombre</label></br>
+        <input type="text" name="nombre" id="nombre"></br>
+        <label for="app">Escribe tu Apellido Paterno</label></br>
+        <input type="text" name="app" id="app"></br>
+        <label for="apm">Escribe tu Apellido Materno</label></br>
+        <input type="text" name="apm" id="apm"></br>
+        <label for="num1">Escribe tu año de nacimiento</label></br>
+        <input type="text" name="num1" id="num1">
+        <label for="num2">Escribe tu mes de nacimiento</label></br>
+        <input type="text" name="num2" id="num2">
+        <label for="num1">Escribe tu dia de nacimiento</label></br>
+        <input type="text" name="num3" id="num3">
+        <label for="resultado">Resultado</label></br>
+        <input type="text" name="resultado" id="resultado"></br>
+
+        <input type="button" name="boton" id="boton" onclick="Resultado()" value="Resultado">
+    </form>
+</body>
+</html>
