@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Obtener totales del formulario</title>
+    <link rel="stylesheet" href="estilos.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">	
+	<link rel="stylesheet" href="Starwars.css"/>
+</head>
+<script>
+//llamo a una vairable total	
+var total;
+//funcion califica que califica todo el proceso
+function califica(){
+	//inicializo la variable
+	var total=0;
+		//en el primer for recorro las preguntas
+    	for (var x=1;x<=5;x++){
+        var res=0;
+		//inicializo la x dependiendo la prefunta en la que estemos ubicados
+        var nom="r"+x;
+        var resul=document.getElementsByName(nom);
+		//en el segundo for recorremos las respuestas de cada pregunta
+        for(var i=0;i<resul.length;i++){
+			//condicionamos de que el resultado sea correcto
+            if(resul[i].checked==true)
+                res=parseInt(resul[i].value);
+        }
+		//guardamos en total la respuesta del usuario
+        total=total+res;
+		//imprimimos los putnos obtenidos
+        document.getElementById("total").innerHTML="Puntos obtenidos: "+total+" Puntos";
+        }
+		//si el usuario obtuvo todas las respuestas bien obtendra 20
+        if(total==25)
+        	document.getElementById("comentario").innerHTML="EXCELENTE!!!";
+        else
+		//si obtuvo 15 es un usuario promedio
+        	if(total==15)
+        	document.getElementById("comentario").innerHTML="Regular!!";
+        else
+		//menos del 15 necesita estudiar mas el usuario 
+        	if(total<=15)
+        	document.getElementById("comentario").innerHTML="Estudia un poco más";
+    }
+</script>
+
+<body background="img/vader1.jpg" style="background-repeat:no-repeat;background-size:cover;background-attachment:fixed;">
+    <div id="contiene">
+	<h1>Responde el siguiente cuestionario</h1>
+	<h2>Provemos tus conocimientos sobre el lado Oscuro</h2>
+<!--Iniciamos con la estiqueta fomr para el formulurario y div para el estilo-->
+<form>
+<div id="div1">
+	
+	<ul>
+		<!--Pregunta con respectivas respuestas, en la parte de value es importatne tenir la puntiacion ya que
+		sera la respuesta correcta-->
+		<li>¿Quién escribió Star Wars?</li>
+		<input type="radio" name="r1" id="r1" value="5"/>George Lucas<br/>
+		<input type="radio" name="r1" id="r1" value="0"/>Pato Lucas<br/>
+		<input type="radio" name="r1" id="r1" value="0"/>Joe Hill<br/>
+		<input type="radio" name="r1" id="r1" value="0"/>Steven King<br/>
+		
+		<li>¿Cuántas películas de Star Wars hay?</li>
+		<input type="radio" name="r2" id="r2" value="0"/>10<br/>
+		<input type="radio" name="r2" id="r2" value="5"/>11<br/>
+		<input type="radio" name="r2" id="r2" value="0"/>12<br/>
+		<input type="radio" name="r2" id="r2" value="0"/>6<br/>
+
+		<li>¿Qué perdió Luke Skywalker en su pelea con Darth Vader?</li>
+		<input type="radio" name="r3" id="r3" value="5"/>Su mano izquierda<br/>
+		<input type="radio" name="r3" id="r3" value="0"/>Su pie izquierdo<br/>
+		<input type="radio" name="r3" id="r3" value="0"/>Su mano derecha<br/>
+		<input type="radio" name="r3" id="r3" value="0"/>Su pierna izquierda<br/>
+
+        <li>Según el Emperador, ¿cuál era la debilidad de Luke Skywalker?</li>
+		<input type="radio" name="r4" id="r4" value="5"/>Su fe en el Lado Luminoso de la Fuerza<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>Su fe en sus amigos<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>Su falta de visión<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>Su resistencia al Lado Oscuro de la Fuerzabr/>
+
+		<li>¿Qué película de Star Wars tiene esta cita: "¡He estado en esta pelea desde que tenía seis años!"</li>
+		<input type="radio" name="r5" id="r5" value="5"/>Star Wars: una nueva esperanza<br/>
+		<input type="radio" name="r5" id="r5" value="0"/>Star Wars: The Rise of Skywalker<br/>
+		<input type="radio" name="r5" id="r5" value="0"/>Rogue Uno: Una historia de Star Wars<br/>
+		<input type="radio" name="r5" id="r5" value="0"/>Solo: Una historia de Star Wars<br/>
+	</ul>
+	
+</div>
+<input type="button" id="button" value="Calificar" onclick="califica()">
+</form>
+<p></p><!--Imprimo los resultados que obtuvo el usuario-->
+<p id="total">   </p>
+<p id="comentario">   </p>
+<iframe frameborder="0" width="600" height="500"></iframe>
+</div>
+</body>
+</html>

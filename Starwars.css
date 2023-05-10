@@ -1,0 +1,20 @@
+/*Aqui establecemos el estilo de cada unos de los parrafos*/
+h1,h2,h3,h4,h5,h6,p,li{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:rgb(223, 28, 126);
+}
+/*estilo del div*/
+#div1{
+    color: rgb(223, 28, 126);
+}
+/*Estilo del boton*/
+#button{
+        background-color: rgb(223, 28, 126);
+        height:60px;
+        color:white;
+        width: 180px;
+
+        -moz-border-radius:20px;
+        -webkit-border-radius:20px;
+        border-radius:20px;
+    }
