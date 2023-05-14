@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Obtener totales del formulario</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">	
+	<link rel="stylesheet" href="no.css"/>
+
+    <script type="text/javascript" src="PDF/js/jquery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="PDF/js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+    <script type="text/javascript" src="PDF/jspdf.js"></script>
+    <script type="text/javascript" src="PDF/jspdf.plugin.addimage.js"></script>
+    <script type="text/javascript" src="PDF/jspdf.plugin.standard_fonts_metrics.js"></script>
+    <script type="text/javascript" src="PDF/jspdf.plugin.split_text_to_size.js"></script>
+    <script type="text/javascript" src="PDF/jspdf.plugin.from_html.js"></script>
+</head>
+<script>
+//llamo a una vairable total	
+var total;
+//funcion califica que califica todo el proceso
+function califica(){
+	//inicializo la variable
+	var total=0;
+		//en el primer for recorro las preguntas
+    	for (var x=1;x<=5;x++){
+        var res=0;
+		//inicializo la x dependiendo la prefunta en la que estemos ubicados
+        var nom="r"+x;
+        var resul=document.getElementsByName(nom);
+		//en el segundo for recorremos las respuestas de cada pregunta
+        for(var i=0;i<resul.length;i++){
+			//condicionamos de que el resultado sea correcto
+            if(resul[i].checked==true)
+                res=parseInt(resul[i].value);
+        }
+		//guardamos en total la respuesta del usuario
+        total=total+res;
+		//imprimimos los putnos obtenidos
+        document.getElementById("total").innerHTML="Puntos obtenidos: "+total+" Puntos";
+        }
+		//si el usuario obtuvo todas las respuestas bien obtendra 20
+        if(total==25)
+        	document.getElementById("comentario").innerHTML="EXCELENTE!!!";
+        else
+		//si obtuvo 15 es un usuario promedio
+        	if(total==15)
+        	document.getElementById("comentario").innerHTML="Regular!!";
+        else
+		//menos del 15 necesita estudiar mas el usuario 
+        	if(total<=15)
+        	document.getElementById("comentario").innerHTML="Estudia un poco más";
+}
+function generar(){
+    //crear un objeto o instancia jsPDF
+    var doc=new jsPDF();
+
+    //definir el tamaño de letra
+    doc.setFontSize(40);
+    // color de texto
+    doc.setTextColor(9,7,121);
+    doc.text(49, 20, "Encuesta");
+    doc.setTextColor(17, 122, 209);
+    doc.setFontSize(30);
+    doc.text(50, 35, "Es importante tu participacion"); //ubicacion
+    doc.setTextColor(0,0,0);
+    doc.setFontSize(20);
+    doc.text(20, 50, "20 puntos. Excelente. \r todas tus respuestas son correctas");
+    doc.text(20, 70, "20 puntos. Excelente. \r Obtuviste al menos 3 preguntas mal");
+    doc.text(20, 90, "10 puntos. Excelente. \r Obtuviste al menos 2 preguntas mal");
+    doc.text(20, 110, "0 puntos. Excelente. \r todo esta mal");
+
+    var string = doc.output('datauristring');
+
+    $('iframe').attr('src', string);
+}
+
+</script>
+
+<body background="img/guitarra.jpg" style="background-repeat:no-repeat;background-size:cover;background-attachment:fixed;">
+    <div id="contiene">
+	<h1>Responde el siguiente cuestionario</h1>
+	<h2>Provemos tus conocimientos sobre el lado Oscuro</h2>
+<!--Iniciamos con la estiqueta fomr para el formulurario y div para el estilo-->
+<form>
+<div id="div1">
+	
+	<ul>
+		<!--Pregunta con respectivas respuestas, en la parte de value es importatne tenir la puntiacion ya que
+		sera la respuesta correcta-->
+		<li>¿De donde es Lisa de Black Pink?</li>
+		<input type="radio" name="r1" id="r1" value="5"/>Tailandia<br/>
+		<input type="radio" name="r1" id="r1" value="0"/>Japon<br/>
+		<input type="radio" name="r1" id="r1" value="0"/>Corea del Sur<br/>
+		<input type="radio" name="r1" id="r1" value="0"/>China<br/>
+		
+		<li>¿Como murio kurt cobain?</li>
+		<input type="radio" name="r2" id="r2" value="0"/>Suicidio<br/>
+		<input type="radio" name="r2" id="r2" value="5"/>Asesinato<br/>
+		<input type="radio" name="r2" id="r2" value="0"/>Daño por caida<br/>
+		<input type="radio" name="r2" id="r2" value="0"/>Envenenamiento<br/>
+
+		<li>¿Cómo se llama la enfermedad de la piel de Michael Jackson?</li>
+		<input type="radio" name="r3" id="r3" value="5"/>vitiligoa<br/>
+		<input type="radio" name="r3" id="r3" value="0"/>Cancer<br/>
+		<input type="radio" name="r3" id="r3" value="0"/>Ninguna<br/>
+		<input type="radio" name="r3" id="r3" value="0"/>Solo se quemo la piel por el sol<br/>
+
+        <li>¿cuantos álbumes tiene kevin kaarl?</li>
+		<input type="radio" name="r4" id="r4" value="5"/>3<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>5<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>2<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>7<br/>
+
+		<li>¿Cuando cumple años Adele?</li>
+		<input type="radio" name="r5" id="r5" value="5"/>Su cumpleaños es el 5 de mayo.<br/>
+		<input type="radio" name="r5" id="r5" value="0"/>Su cumpleaños es el 10 de mayo.<br/>
+		<input type="radio" name="r5" id="r5" value="0"/>Su cumpleaños es el 31 de mayo.<br/>
+		<input type="radio" name="r5" id="r5" value="0"/>Su cumpleaños es el 13 de mayo.<br/>
+	</ul>
+	
+</div>
+<input type="button" id="button" value="Calificar" onclick="califica()">
+<input type="button" id="button" value="Generar PDF" onclick="generar()">
+</form>
+<p></p><!--Imprimo los resultados que obtuvo el usuario-->
+<p id="total">   </p>
+<p id="comentario">   </p>
+<iframe frameborder="0" width="600" height="500"></iframe>
+</div>
+</body>
+</html>
