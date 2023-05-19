@@ -1,0 +1,11 @@
+/*Estilo del boton*/
+#button{
+    background-color: rgb(223, 28, 126);
+    height:60px;
+    color:white;
+    width: 180px;
+
+    -moz-border-radius:20px;
+    -webkit-border-radius:20px;
+    border-radius:20px;
+}

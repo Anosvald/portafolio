@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Obtener totales del formulario</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">	
+	<link rel="stylesheet" href="hola12.css"/>
+
+    <script type="text/javascript" src="PDF/js/jquery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="PDF/js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+    <script type="text/javascript" src="PDF/jspdf.js"></script>
+    <script type="text/javascript" src="PDF/jspdf.plugin.addimage.js"></script>
+    <script type="text/javascript" src="PDF/jspdf.plugin.standard_fonts_metrics.js"></script>
+    <script type="text/javascript" src="PDF/jspdf.plugin.split_text_to_size.js"></script>
+    <script type="text/javascript" src="PDF/jspdf.plugin.from_html.js"></script>
+</head>
+<script>
+//llamo a una vairable total	
+var total;
+//funcion califica que califica todo el proceso
+function califica(){
+	//var dateControl = document.querySelector('input[type="date"]');
+    //var monthSelect = document.querySelector("#month");
+    var fechaHoy = new Date().toISOString().slice(0, 10);  
+    var soloFechaHoy = fechaHoy; 
+ 
+    // Definimos las fechas festivas o fechas en donde se debe mostrar el Mensaje 
+    var descuento = "2023-05-01"; 
+
+      // Verificamos si la fecha es igual a la de Navidad y mostramos un mensaje 
+      if (soloFechaHoy >= descuento || soloFechaHoy <= descuento) {
+      texto = "Tiene el descuento !";
+      imagen = "img/descargasi";
+    } else if (soloFechaHoy == soloFechaHoy) {
+      
+      texto = "Hoy " + soloFechaHoy + " es un día Genial !";
+    // Si ninguna fecha coincide, entonces mostramos un mensaje por defecto   
+    } else {
+      
+      texto = "Por el Momento no hay descuento";
+    } 
+
+    // Enviamos el mensaje al elemento con id "mensajesaludo" 
+    document.images["imagensaludo"].src = imagen;
+    //document.getElementById("imagensaludo")..src = imagen;
+    document.getElementById('mensajesaludo').innerHTML = texto; 
+        
+}
+</script>
+
+<body>
+    <h1>Descuento</h1>
+    <form action="" method="post" enctype="text/plain">
+        <fieldset>
+            <legend>
+                <label for="Informacion">
+                    Informacion del Cliente
+                </label> 
+            </legend>
+            <table >
+                <thead>
+                    <tr>
+                        <th>
+                            <label for="nombre">Nombre</label>
+                             <input type="text" placeholder="Nombre" maxlength="12" name="nombre" id="nombre"><br>
+                             
+                             <br>
+
+                             <label for="fechan">Fecha de la venta:</label><br>
+                             <input type="date" name="fechan" id="fechan"/><br>
+
+                        </th>
+                    </tr>
+                </thead>
+            </table>
+        </fieldset>   
+    </form>
+<input type="button" id="button" value="Calificar" onclick="califica()">    
+</form>
+<p></p><!--Imprimo los resultados que obtuvo el usuario-->
+
+<h1 id="mensajesaludo"></h1> 
+<img name="imagensaludo" id="imagensaludo" src="" class="img-fluid mt-3" width="20%"> 
+
+<iframe frameborder="0" width="600" height="500"></iframe>
+</div>
+</body>
+</html>
